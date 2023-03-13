@@ -14,7 +14,7 @@ public class FirstScreenPage {
     public final SelenideElement middleNameInput = $x("//input[@name='middleName']");
     public final SelenideElement emailInput = $x("//input[@name='email']");
     public final SelenideElement phoneInput = $x("//input[@name='phone']");
-//    public final SelenideElement noPeselCheckbox = $x();
+    public final SelenideElement noPeselCheckbox = $x("//*[@for='checkbox-750']//span[@class='slds-checkbox_faux']");
     public final SelenideElement dateOfBirthInput = $x("//input[@name='dateOfBirth']");
     public final SelenideElement countryOfBirthList = $x("//input[@name='countryOfBirth']");
     public final SelenideElement cityOfBirthInput = $x("//input[@name='cityOfBirth']");

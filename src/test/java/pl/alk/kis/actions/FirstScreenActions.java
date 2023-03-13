@@ -25,7 +25,8 @@ public class FirstScreenActions extends FirstScreenPage {
         middleNameInput.sendKeys(generateMiddleName());
         emailInput.sendKeys(generateEmailAddress());
         phoneInput.sendKeys(generatePhoneNumber());
-//        noPeselCheckbox.click();
+        noPeselCheckbox.click();
+        System.out.println("test");
         dateOfBirthInput.sendKeys(generateDateOfBirth());
         countryOfBirthList.click();
         selectComboboxPosition("Polska");
