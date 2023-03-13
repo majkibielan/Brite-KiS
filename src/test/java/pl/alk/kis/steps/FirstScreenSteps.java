@@ -30,7 +30,7 @@ public class FirstScreenSteps extends FirstScreenPage {
         firstScreenActions.fillCourseSection();
     }
 
-    @And("I populate personal details section")
+    @And("I populate personal details section without PESEL number")
     public void populatePersonalDetailsSection() {
         firstScreenActions.fillPersonalDetailsSection();
     }
@@ -40,14 +40,9 @@ public class FirstScreenSteps extends FirstScreenPage {
         firstScreenActions.fillMailingAddressSection();
     }
 
-    @And("I check consents")
+    @When("I check consents and proceed to next screen")
     public void checkConsents() {
-        firstScreenActions.checkConsents();
-    }
-
-    @When("I click Next")
-    public void clickNext() {
-        firstScreenActions.clickNextButton();
+        firstScreenActions.checkConsentsAndProceedToNextScreen();
     }
 
     @Then("Second screen is displayed")

@@ -2,8 +2,7 @@ package pl.alk.kis.utils;
 
 import com.github.javafaker.Faker;
 
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class DataGenerator {
 
@@ -19,16 +18,16 @@ public class DataGenerator {
         return faker.name().lastName();
     }
     public static final String generateEmailAddress() {
-        return generateFirstName() + "." + generateLastName() + "@.mail.com";
+        return generateFirstName() + "." + generateLastName() + "@testmail.com";
     }
     public static final String generatePhoneNumber() {
-        return faker.phoneNumber().cellPhone();
+        return faker.number().digits(9);
     }
 
     public static final String generateDateOfBirth() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        String dateOfBirth = faker.date().birthday(17, 79).toString();
-        return String.format(dateOfBirth, formatter);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateOfBirth = sdf.format(faker.date().birthday(17, 79));
+        return dateOfBirth;
     }
     public static final String generateCityOfBirth() {
         return faker.address().city();
