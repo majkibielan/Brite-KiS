@@ -10,7 +10,7 @@ public class PropertiesManager {
 
     static Properties properties;
 
-    public static void setUpProperties() {
+    public static void setupProperties() {
         properties = ConfigFileReader.getPropertiesFromFile("configuration.properties");
         Configuration.browser = getBrowserType();
         ChromeOptions options = new ChromeOptions();
