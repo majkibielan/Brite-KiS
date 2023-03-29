@@ -1,7 +1,7 @@
 @first-screen
-  Feature: Fill form on the form page
+  Feature: Fill form on the course registration page
 
-    Scenario: Fill polish form on the first screen
+    Scenario: Fill course registration form on the first screen in polish language
       Given an open browser with https://kozminski--qa.sandbox.my.site.com/s/course-registration?language=pl
       And I populate course section
       And I populate personal details section without PESEL number

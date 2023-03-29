@@ -41,5 +41,8 @@ public class DataGenerator {
     public static final String generateApartmentNumber() {
         return faker.address().buildingNumber();
     }
+    public static final String generateRandomText() {
+        return faker.lorem().characters(50, 150);
+    }
 
 }
